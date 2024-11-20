@@ -1,0 +1,112 @@
+.take-test__board {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: calc(100%);
+  transition: all 0.55s cubic-bezier(0.32, -0.08, 0.42, 1.22);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+@media (max-width: 767px) {
+  .take-test__board {
+    flex-direction: column;
+    height: calc(100%);
+    top: 56px;
+    transform: none;
+  }
+
+}
+/* width */
+.take-test__split-item::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+/* Track */
+.take-test__split-item::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+
+}
+ 
+/* Handle */
+.take-test__split-item::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+.take-test__split-item::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.take-test__split-item{
+    overflow: auto;
+
+}
+.take-test__split-item {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .take-test__split-item {
+    width: 100%;
+    height: 50%;
+  }
+}
+.take-test__split-item > section {
+  position: relative;
+  border-radius: 0;
+  border-bottom: 0;
+  border-top: 0;
+}
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+    cursor: grab !important;
+  }
+  .gutter.gutter-horizontal {
+    background: #f3f3f3;
+  }
+  .gutter.gutter-horizontal:after {
+    content: "hi";
+    font-family: "iot-fonts" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    color: #294563;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } 
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .gutter {
+    background: #f3f3f3 url() no-repeat center center;
+  }
+}
+@media (max-width: 767px) {
+  .gutter {
+    background: #f3f3f3 url() no-repeat center center;
+  }
+}
+.gutter-vertical {
+  clear: both;
+  cursor: ns-resize;
+}
+.gutter.gutter-horizontal {
+  height: 100%;
+  float: left;
+}
